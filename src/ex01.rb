@@ -36,32 +36,24 @@ end
 ## Ex01-C 追記分
 
 class Log
+  # timeは、単体テスト用
   def initialize(recep_type, phone_number, baggage, time=nil)
-    @recep_type = recep_type
-    @phone_number = phone_number
-    @baggage = baggage
-    @time = time || Time.now.gmtime
   end
 
   def to_s
-    "(#{@recep_type}): #{@phone_number}, #{@baggage}, #{@time}"
   end
 end
 
 class Logger
-  attr_reader :logs
   def initialize
-    @logs = []
   end
 
   # ログを追記
   def <<(log)
-    @logs << log
   end
 
   # ログを改行区切りの文字列として返す。
   def show_logs
-    @logs.map{|log| log.to_s }.join("\n")
   end
 end
 
