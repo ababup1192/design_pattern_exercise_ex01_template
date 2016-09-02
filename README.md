@@ -5,5 +5,6 @@
 ## テスト方法
 
 ```
+$ git clone https://github.com/ababup1192/design_pattern_exercise_ex01_template.git ex01 && cd ex01
 $ ruby test/ex01_test.rb
 ```
