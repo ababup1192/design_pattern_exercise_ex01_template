@@ -91,4 +91,17 @@ class TestStore < Test::Unit::TestCase
   end
 end
 
+class TestReception < Test::Unit::TestCase
+  test '預けたものが返る' do
+    reception = Reception.new
+    baggages = [:key, :bag, :ball, :golf_club]
+    phone_number = 'xxx-xxxx-xxxx'
+    reception.check(phone_number, baggages)
+
+    expected = baggages.sort
+    actual = reception.take(phone_number).sort
+
+    assert_equal expected, actual
+  end
+end
 

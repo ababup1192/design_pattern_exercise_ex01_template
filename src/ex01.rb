@@ -13,7 +13,7 @@ end
 # 倉庫
 class Store
   ## 問題文やテストコードを参考に実装をしてください。
-  
+
   # 預けている荷物 {電話番号: [荷物]} の形をしたHash
   attr_reader :contents
   def initialize
@@ -28,5 +28,22 @@ class Store
   # 取り出した荷物は、@contentsから削除する。
   def take(phone_number)
     nil
+  end
+end
+
+## Ex01-B 追記分
+
+# 預かり所
+class Reception
+  # 必要オブジェクトをインスタンス化
+  def initialize
+  end
+
+  # 電話番号と[荷物]を伝えて、荷物を預ける
+  def check(phone_number, baggages)
+  end
+
+  # [荷物]を受け取る
+  def take(phone_number)
   end
 end
